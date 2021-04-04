@@ -6,11 +6,48 @@
 
     <groupId>de.notecho</groupId>
     <artifactId>NotechoBungeeBan</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>NotechoBungeeBanAPI</module>
+        <module>NotechoBungeeBanPlugin</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>bungeecord-repo</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.18</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependencies>
+            <dependency>
+                <groupId>net.md-5</groupId>
+                <artifactId>bungeecord-api</artifactId>
+                <version>1.16-R0.5-SNAPSHOT</version>
+                <type>jar</type>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>net.md-5</groupId>
+                <artifactId>bungeecord-api</artifactId>
+                <version>1.16-R0.5-SNAPSHOT</version>
+                <type>javadoc</type>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencies>
 
 </project>
